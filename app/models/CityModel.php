@@ -27,6 +27,10 @@ class CityModel {
             return [];
         }
         
+        if (!getCurrentLocale()) {
+            return [];
+        }
+        
         return $data[getCurrentLocale()];
     }
 }
