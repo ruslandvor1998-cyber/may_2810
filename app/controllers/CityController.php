@@ -1,7 +1,7 @@
 <?php
 
 namespace app\controllers;
-use CityModel;
+use app\models\CityModel;
 
 class CityController
 {
