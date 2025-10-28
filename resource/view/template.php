@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $_GET['lang']?>"
+<html lang="<?= getCurrentLocale() ?>"
 <head>
     <meta charset="UTF-8">
     <title><?= trans('common.title') ?></title>
@@ -11,7 +11,7 @@
 <h2><?= trans('common.list_headline') ?></h2>
 <ul>
     <?php foreach ($cities as $city): ?>
-        <li><?= htmlspecialchars($city['name']) ?></li>
+        <li><?= htmlspecialchars($city) ?></li>
     <?php endforeach; ?>
 </ul>
 <footer>
