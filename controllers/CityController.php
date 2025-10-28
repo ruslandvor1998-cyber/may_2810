@@ -7,6 +7,6 @@ class CityController
         $citiesArr = new CityModel();
         $currentCities = $citiesArr->all();
         extract($currentCities);
-        include_once 'resorce/views/template.php';
+        include_once 'resource/views/template.php';
     }
 }
