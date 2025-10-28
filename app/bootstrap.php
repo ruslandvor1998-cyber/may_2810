@@ -52,7 +52,6 @@ function trans($key): string
 
 spl_autoload_register(function ($class) {
     $file = ROOT_PATH  . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
-    var_dump($file);
     if (file_exists($file)) {
         include_once $file;
         return true;
