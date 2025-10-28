@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+
+define('ROOT_PATH', realpath(__DIR__ . DIRECTORY_SEPARATOR . '..') . DIRECTORY_SEPARATOR);
 
 /**
  * @return string|null
@@ -33,7 +33,7 @@ function trans($key): string
         return $key;
     }
     $langComponents = explode('.', $key);
-    $langDir = DIRECTORY_SEPARATOR . 'resource' . DIRECTORY_SEPARATOR . 'lang' . DIRECTORY_SEPARATOR . strtolower($locale) . DIRECTORY_SEPARATOR;
+    $langDir = ROOT_PATH . 'resource' . DIRECTORY_SEPARATOR . 'lang' . DIRECTORY_SEPARATOR . strtolower($locale) . DIRECTORY_SEPARATOR;
     if (!file_exists($langDir)) {
         throw new Exception('Directory "lang" not found');
     }
@@ -49,8 +49,7 @@ function trans($key): string
 }
 
 spl_autoload_register(function ($class) {
-
-    $file = DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
+    $file = ROOT_PATH . 'app' . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
     if (file_exists($file)) {
         include_once $file;
         return true;

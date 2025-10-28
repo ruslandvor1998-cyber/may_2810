@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=""
+<html lang="<?= $_GET['lang']?>"
 <head>
     <meta charset="UTF-8">
     <title><?= trans('common.title') ?></title>
