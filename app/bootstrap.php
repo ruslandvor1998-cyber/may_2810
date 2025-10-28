@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 define('ROOT_PATH', realpath(__DIR__ . DIRECTORY_SEPARATOR . '..') . DIRECTORY_SEPARATOR);
 
@@ -56,6 +58,3 @@ spl_autoload_register(function ($class) {
     }
     return false;
 });
-
-$cities = new CityController();
-$cities->index();
