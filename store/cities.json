@@ -1,9 +1,20 @@
-[
-  { "ru": "Киев", "en": "Kyiv" },
-  { "ru": "Харьков", "en": "Kharkiv" },
-  { "ru": "Одесса", "en": "Odesa" },
-  { "ru": "Днепр", "en": "Dnipro" },
-  { "ru": "Львов", "en": "Lviv" },
-  { "ru": "Запорожье", "en": "Zaporizhzhia" },
-  { "ru": "Николаев", "en": "Mykolaiv" }
-]
+{
+  "ru": [
+    "Киев",
+    "Львов",
+    "Одесса",
+    "Харьков",
+    "Днепр",
+    "Запорожье",
+    "Ивано-Франковск"
+  ],
+  "en": [
+    "Kyiv",
+    "Lviv",
+    "Odesa",
+    "Kharkiv",
+    "Dnipro",
+    "Zaporizhzhia",
+    "Ivano-Frankivsk"
+  ]
+}
