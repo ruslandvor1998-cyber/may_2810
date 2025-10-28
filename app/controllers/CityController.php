@@ -1,5 +1,8 @@
 <?php
 
+namespace app\controllers;
+use CityModel;
+
 class CityController
 {
     public function index()
