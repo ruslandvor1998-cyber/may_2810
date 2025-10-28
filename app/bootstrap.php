@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+define('DEFAULT_LANG', 'en');
 define('ROOT_PATH', realpath(__DIR__ . DIRECTORY_SEPARATOR . '..') . DIRECTORY_SEPARATOR);
 
 /**
@@ -18,6 +18,9 @@ function getCurrentLocale(): ?string
         } else if (isset($_GET['ru'])) {
             $locale = 'ru';
         }
+    }
+    if ($locale === null){
+        header('Location: /index.php?' . DEFAULT_LANG );
     }
     return $locale;
 }
