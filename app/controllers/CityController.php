@@ -7,9 +7,9 @@ class CityController
 {
     public function index()
     {
-        $citiesArr = new CityModel();
-        $currentCities = $citiesArr->all();
-        extract($currentCities);
+        $citiesModel = new CityModel();
+        $cities = $citiesModel->all();
+        extract($cities);
         include_once 'resource/view/template.php';
     }
 }
